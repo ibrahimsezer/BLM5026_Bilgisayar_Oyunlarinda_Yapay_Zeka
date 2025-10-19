@@ -1,17 +1,17 @@
 Assignment 1 – Basic TSP on Random Points
 
-Proje Amacı
+## Proje Amacı
 
 Bu ödevin amacı, Gezgin Satıcı Problemi (Traveling Salesperson Problem - TSP) için temel bir grafik soyutlaması yapmak, rastgele bir örnek oluşturmak ve problemin çözümü için En Yakın Komşu (Nearest Neighbor) gibi basit bir sezgiseli uygulamaktır.
 
-Gereksinimler
+### Gereksinimler
 
 Bu projeyi çalıştırmak için aşağıdaki Python kütüphaneleri gereklidir:
 ```
 pip install numpy networkx matplotlib
 ```
 
-Çalıştırma
+### Çalıştırma
 
 Python script dosyasını (tsp_nearest_neighbor.py) çalıştırın:
 ```
@@ -23,7 +23,7 @@ Terminal çıktısında tur sırasını ve maliyetini göreceksiniz.
 
 Bir matplotlib penceresinde, rastgele noktalar ve sezgisel ile bulunan tur görselleştirilecektir.
 
-Uygulanan Yaklaşım ve Kriter Analizi
+### Uygulanan Yaklaşım ve Kriter Analizi
 
 1. Rastgele Grafik Üretimi
 
@@ -55,4 +55,29 @@ Düğümler: Tüm noktalar mavi noktalarla, başlangıç noktası ise kırmızı
 
 Tur: Tur, gri çizgilerle, turu kapatan son kenar ise netlik için yeşil renkte çizilmiştir.
 
-Açıklık: Görselin başlığında ve eksen etiketinde tur sırası ve hesaplanan toplam maliyet açıkça belirtilmiştir.
+Açıklık: Görselin başlığında ve eksen etiketinde kullanılan seed, tur sırası ve hesaplanan toplam maliyet açıkça belirtilmiştir.
+
+### Kenar Sayısı Doğrulaması
+
+Kullanılan $N=15$ düğümlü grafik, bir Tam Grafik (Complete Graph) olduğu için, toplam kenar sayısı ($E$) aşağıdaki formülle hesaplanır:
+$$
+E = \frac{N \times (N - 1)}{2}
+$$
+
+**Hesaplama:**
+
+$N = 15$ için:
+
+$$
+E = \frac{15 \times (15 - 1)}{2} = \frac{15 \times 14}{2} = 105
+$$
+
+Bu sonuç, kod çıktısında belirtilen **105 kenar** sayısının doğruluğunu teyit etmektedir.
+
+## Sonuçlar
+
+### Seed 16
+![Seed 16 TSP Nearest Neighbor Figure](https://github.com/ibrahimsezer/BLM5026_Bilgisayar_Oyunlarinda_Yapay_Zeka/raw/main/homework_1/seed16_tsp_nearest_neighbor_figure.png)
+
+### Seed 42
+![Seed 42 TSP Nearest Neighbor Figure](https://github.com/ibrahimsezer/BLM5026_Bilgisayar_Oyunlarinda_Yapay_Zeka/raw/main/homework_1/seed42_tsp_nearest_neighbor_figure.png)
