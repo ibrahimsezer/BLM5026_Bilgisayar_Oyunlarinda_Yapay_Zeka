@@ -60,6 +60,7 @@ Açıklık: Görselin başlığında ve eksen etiketinde kullanılan seed, tur s
 ### Kenar Sayısı Doğrulaması
 
 Kullanılan $N=15$ düğümlü grafik, bir Tam Grafik (Complete Graph) olduğu için, toplam kenar sayısı ($E$) aşağıdaki formülle hesaplanır:
+
 $$
 E = \frac{N \times (N - 1)}{2}
 $$
