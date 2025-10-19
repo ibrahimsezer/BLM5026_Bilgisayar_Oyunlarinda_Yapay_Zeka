@@ -3,7 +3,7 @@ import networkx as nx
 import matplotlib.pyplot as plt
 
 #Tohum sabiti
-SEED = 42 
+SEED = 16 
 np.random.seed(SEED)
 
 def generate_tsp_instance(num_points, max_coord=100):
@@ -112,7 +112,7 @@ def visualize_tsp_tour(coordinates, tour, title="TSP Tour by Nearest Neighbor He
         plt.plot([x1, x2], [y1, y2], color=color, linestyle=linestyle, linewidth=linewidth, alpha=0.7)
 
     plt.title(title)
-    plt.xlabel(f"X Koordinatı\n Yol: {tsp_tour} | Toplam uzunluk: {tour_cost:.2f} ") #sonuçları plot ekranında yazdırma
+    plt.xlabel(f"X Koordinatı | Seed: {SEED} \n Yol: {tsp_tour} | Toplam uzunluk: {tour_cost:.2f} ") #sonuçları plot ekranında yazdırma
     plt.ylabel("Y Koordinatı")
     plt.grid(True, linestyle='--', alpha=0.5)
     plt.legend()
